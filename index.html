@@ -17,17 +17,15 @@
   <script type="text/javascript" src="jscolor.js"></script>
   <script> 
   var ongoingTouches = new Array;
-    var el = document.getElementById("canvas");
-    var ctx = el.getContext("2d");  
-  
-  var colorEle = document.getElementById("colorValue");
-  var clear = document.getElementById("clear");
-  var colorValue = "";
+  el = document.getElementById("canvas"),
+  ctx = el.getContext("2d"),  
+  colorEle = document.getElementById("colorValue"),
+  clear = document.getElementById("clear"),
+  colorValue = "";
   jscolor.addEvent(colorEle,"change",function(){
     colorValue = this.value;
   });
   clear.onclick = function(){
-
     ctx.clearRect(0,0,978,1400);
   }
 
@@ -129,8 +127,6 @@ ontouchenter
 ontouchleave
 ontouchcancel
 */
-   
-
 
 var el = document.getElementById("canvas");
 el.ontouchmove = function(evt){
